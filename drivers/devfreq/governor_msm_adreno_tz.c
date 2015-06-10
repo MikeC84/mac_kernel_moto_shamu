@@ -162,6 +162,16 @@ static int tz_get_target_freq(struct devfreq *devfreq, unsigned long *freq,
 
 	*freq = stats.current_frequency;
 	*flag = 0;
+
+	/*
+	 * Force to use & record as min freq when system has
+	 * entered pm-suspend or screen-off state.
+	 */
+	if (suspended || power_suspended) {
+		*freq = devfreq->profile->freq_table[devfreq->profile->max_state - 1];
+		return 0;
+	}
+
 	priv->bin.total_time += stats.total_time;
 	priv->bin.busy_time += stats.busy_time;
 	if (priv->bus.num) {
