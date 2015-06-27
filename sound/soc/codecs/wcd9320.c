@@ -40,7 +40,7 @@
 #include "wcd9xxx-resmgr.h"
 #include "wcd9xxx-common.h"
 
-static bool enable_fs = false;
+static bool enable_fs = true;
 module_param(enable_fs, bool, 0644);
 
 #define TAIKO_MAD_SLIMBUS_TX_PORT 12
