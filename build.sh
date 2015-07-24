@@ -2,7 +2,7 @@
 
 KERNELDIR="/home/michael/android/kernels/shamu/mac_kernel_moto_shamu"
 PACKAGES="/home/michael/android/kernels/shamu/package-shamu"
-TOOLCHAIN="/home/michael/android/toolchains/arm-cortex_a15-linux-gnueabihf-linaro_4.9.3-2015.03/bin"
+TOOLCHAIN="/home/michael/android/toolchains/arm-cortex_a15-linux-gnueabihf-linaro_4.9.4-2015.06/bin"
 CROSSARCH="arm"
 CROSSCC="$CROSSARCH-eabi-"
 USERCCDIR="/home/michael/.ccache"
